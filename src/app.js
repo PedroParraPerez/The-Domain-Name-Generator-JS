@@ -17,7 +17,7 @@ const domaingenerator = () => {
       for (let n = 0; n < noun.length; n++) {
         let domain = `${pronoun[p]}${adj[a]}${noun[n]}.com`;
         document.write(
-          `<html><body><p class="text-center">${domain}</p></body></html>`
+          `<html><body><p class="text-center">${domain}</p>></body></html>`
         );
       }
     }
