@@ -4,25 +4,26 @@ import "./style.css";
 
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
-
-// Domain Generator //
+let domaingenerator = document.querySelector("#domain");
+window.onload = function() {};
 
 let pronoun = ["the", "our"];
 let adj = ["great", "big"];
-let noun = ["jogger", "racoon"];
+let noun = ["jogger", "telecom", "supercabinet"];
+let ext = [".com", ".net"];
+let frases = [];
 
-const domaingenerator = () => {
-  for (let p = 0; p < pronoun.length; p++) {
-    for (let a = 0; a < adj.length; a++) {
-      for (let n = 0; n < noun.length; n++) {
-        let domain = `${pronoun[p]}${adj[a]}${noun[n]}.com`;
-        document.write(
-          `<html><body><p class="text-center">${domain}</p>></body></html>`
+for (let i = 0; i < pronoun.length; i++) {
+  for (let j = 0; j < adj.length; j++) {
+    for (let z = 0; z < noun.length; z++) {
+      for (let y = 0; y < ext.length; y++) {
+        let domain = `${pronoun[i] + adj[j] + noun[z] + ext[y]}`;
+
+        domaingenerator.innerHTML = document.write(
+          `<li class="text-center">${domain}</li>`
         );
       }
     }
   }
+}
 
-  return;
-};
-domaingenerator();
